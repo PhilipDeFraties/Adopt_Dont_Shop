@@ -242,6 +242,7 @@
         "lines": [
           1,
           1,
+          1,
           null,
           null
         ]
@@ -249,6 +250,37 @@
       "/Users/philipdefraties/2module/adopt_dont_shop/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/philipdefraties/2module/adopt_dont_shop/spec/features/shelters/show_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -283,6 +315,11 @@
           1,
           1,
           null,
+          null,
+          1,
+          2,
+          null,
+          null,
           null
         ]
       },
@@ -293,6 +330,6 @@
         ]
       }
     },
-    "timestamp": 1597881776
+    "timestamp": 1597894874
   }
 }

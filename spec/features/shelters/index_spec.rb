@@ -8,17 +8,9 @@ RSpec.describe "shelters index page" do
     city: "Denver", state: "CO", zip: 80204)
   end
 
-    it "can see each shelter's name and address" do
+    it "can see each shelter's name" do
       visit "/shelters"
     expect(page).to have_content(@shelter_1.name)
-    expect(page).to have_content(@shelter_1.address)
-    expect(page).to have_content(@shelter_1.city)
-    expect(page).to have_content(@shelter_1.state)
-    expect(page).to have_content(@shelter_1.zip)
     expect(page).to have_content(@shelter_2.name)
-    expect(page).to have_content(@shelter_2.address)
-    expect(page).to have_content(@shelter_2.city)
-    expect(page).to have_content(@shelter_2.state)
-    expect(page).to have_content(@shelter_2.zip)
     end
   end
