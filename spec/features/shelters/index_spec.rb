@@ -2,14 +2,23 @@ require 'rails_helper'
 require 'pry'
 RSpec.describe "shelters index page" do
   before :each do
-    @shelter_1 = Shelter.create(name: "Shelter Name 1")
-    @shelter_2 = Shelter.create(name: "Shelter Name 2")
+    @shelter_1 = Shelter.create(name: "Shelter Name 1", address: "5 Street st.",
+    city: "Lakewood", state: "CO", zip: 80204)
+    @shelter_2 = Shelter.create(name: "Shelter Name 2", address: "6 Street st.",
+    city: "Denver", state: "CO", zip: 80204)
   end
 
-  describe 'it in more details' do
-    it "I see each shelter's name" do
+    it "can see each shelter's name and address" do
       visit "/shelters"
     expect(page).to have_content(@shelter_1.name)
+    expect(page).to have_content(@shelter_1.address)
+    expect(page).to have_content(@shelter_1.city)
+    expect(page).to have_content(@shelter_1.state)
+    expect(page).to have_content(@shelter_1.zip)
     expect(page).to have_content(@shelter_2.name)
+    expect(page).to have_content(@shelter_2.address)
+    expect(page).to have_content(@shelter_2.city)
+    expect(page).to have_content(@shelter_2.state)
+    expect(page).to have_content(@shelter_2.zip)
     end
   end
