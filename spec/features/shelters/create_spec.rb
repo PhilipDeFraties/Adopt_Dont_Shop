@@ -21,13 +21,6 @@ RSpec.describe "New shelter" do
     describe "When I visit the new shelter form by clicking a link on the index" do
       it "I can create a new shelter" do
 
-  # before :each do
-  #   @shelter_1 = Shelter.create(name: "Shelter Name 1", address: "5 Street st.",
-  #   city: "Lakewood", state: "CO", zip: 80204)
-  #   @shelter_2 = Shelter.create(name: "Shelter Name 2", address: "6 Street st.",
-  #   city: "Denver", state: "CO", zip: 80204)
-  # end
-
       visit "/shelters"
       click_link "New Shelter"
 
