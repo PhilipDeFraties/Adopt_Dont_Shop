@@ -1,0 +1,8 @@
+<h1>Pet Info</h1>
+
+<h2><%= image_tag(@pet.image_path, :size => "200x100")%></h2>
+<h2><%= @pet.name %></h2>
+<h2><%= @pet.approx_age %></h2>
+<h2><%= @pet.sex %></h2>
+<h2><%= @pet.shelter_id %></h2>
+<h2><%= @pet.adoptable? %></h2><br>
