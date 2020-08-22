@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_19_231751) do
+ActiveRecord::Schema.define(version: 2020_08_22_034907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pets", force: :cascade do |t|
+    t.string "image"
+    t.string "name"
+    t.integer "approx_age"
+    t.string "sex"
+    t.string "shelter_name"
+  end
 
   create_table "shelters", force: :cascade do |t|
     t.string "name"
@@ -21,6 +29,8 @@ ActiveRecord::Schema.define(version: 2020_08_19_231751) do
     t.string "city"
     t.string "state"
     t.integer "zip"
+    t.bigint "pets_id"
+    t.index ["pets_id"], name: "index_shelters_on_pets_id"
   end
 
 end

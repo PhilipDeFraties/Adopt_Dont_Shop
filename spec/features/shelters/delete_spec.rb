@@ -8,14 +8,14 @@ require 'rails_helper'
 # and I am redirected to the shelter index page where I no longer see this shelter
 RSpec.describe 'As a Visitor' do
   it 'I can delete a shelter' do
-    shelter_1 = Shelter.create(name: "Shelter Name 1", address: "5 Street st.",
+    shelter = Shelter.create(name: "Rando Name", address: "5 Street st.",
     city: "Lakewood", state: "CO", zip: 80204)
 
-    visit "/shelters/#{shelter_1.id}"
+    visit "/shelters/#{shelter.id}"
 
     click_link 'Delete'
 
     expect(current_path).to eq('/shelters')
-    expect(page).to_not have_content(shelter_1.name)
+    expect(page).to_not have_content(shelter.name)
   end
 end
