@@ -17,7 +17,7 @@ require 'rails_helper'
 RSpec.describe "Edit shelter" do
   before :each do
     @shelter_1 = Shelter.create(name: "Shelter Name 1", address: "5 Street st.",
-    city: "Lakewood", state: "CO", zip: 80204)
+                                city: "Lakewood", state: "CO", zip: 80204)
   end
   describe "As a visitor" do
     describe "When I visit a shelter edit page by clicking a link on a show page" do

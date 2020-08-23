@@ -1,9 +1,11 @@
 <h1>Pet Info</h1>
 
-<h2><%= image_tag(@pet.image_path, :size => "200x100")%></h2>
-<h2>Name: <%= @pet.name %></h2>
-<h2>Approximate age: <%= @pet.approx_age %></h2>
-<h2>Sex: <%= @pet.sex %></h2>
-<h2>Shelter ID: <%= @pet.shelter_id %></h2>
-<h2>Adoption status: <%= @pet.status %></h2><br>
-<h2>Description: <%= @pet.description %></h2><br>
+<%= image_tag(@pet.image_path, :size => "200x100")%><br>
+Name: <%= @pet.name %><br>
+Approximate age: <%= @pet.approx_age %><br>
+Sex: <%= @pet.sex %><br>
+Shelter ID: <%= @pet.shelter_id %><br>
+Adoption status: <%= @pet.status %><br>
+Description: <%= @pet.description %><br>
+
+<%= link_to 'Update Pet', "/pets/#{@pet.id}/edit" %><br>

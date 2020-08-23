@@ -3,9 +3,11 @@ RSpec.describe "pets index page" do
   shelter_1 = Shelter.create(name: 'Shelter Name 1', address: '5 Street st.',
                              city: 'Lakewood', state: 'CO', zip: 80204)
   shadow = shelter_1.pets.create(image_path: 'cat1.jpg', name: 'Shadow',
-                                 approx_age: 7, sex: 'Male',
-                                  description: "Snuggle bug")
-  nooch = shelter_1.pets.create(image_path: "cat2.jpg", name:"Nooch", approx_age: 7, sex: "Male", description: "Biter")
+                                approx_age: 7, sex: 'Male',
+                                description: "Snuggle bug")
+  nooch = shelter_1.pets.create(image_path: "cat2.jpg", name:"Nooch",
+                                approx_age: 7, sex: "Male",
+                                description: "Biter")
 
   it "can see all pets info" do
       visit "/pets"
