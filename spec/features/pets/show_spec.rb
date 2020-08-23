@@ -14,7 +14,7 @@ RSpec.describe 'pets show page' do
   shelter_1 = Shelter.create(name: 'Shelter Name 1', address: '5 Street st.',
                              city: 'Lakewood', state: 'CO', zip: 80204)
   shadow = shelter_1.pets.create(image_path: 'cat1.jpg', name: 'Shadow',
-                                 approx_age: 7, sex: 'Male', adoptable: true)
+                                 approx_age: 7, sex: 'Male')
 
   it "can see all of a pet's info" do
     visit "/pets/#{shadow.id}"
@@ -23,6 +23,6 @@ RSpec.describe 'pets show page' do
     expect(page).to have_content(shadow.approx_age)
     expect(page).to have_content(shadow.sex)
     expect(page).to have_content(shadow.shelter_id)
-    expect(page).to have_content(shadow.adoptable)
+    expect(page).to have_content(shadow.status)
   end
 end
