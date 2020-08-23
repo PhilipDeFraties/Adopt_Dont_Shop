@@ -2,13 +2,13 @@
 
 <h1><%= @shelter.name %></h1>
 
-<p><%= @shelter.address %></p>
+<%= @shelter.address %><br>
 
-<p><%= @shelter.city %></p>
+<%= @shelter.city %><br>
 
-<p><%= @shelter.state %></p>
+<%= @shelter.state %><br>
 
-<p><%= @shelter.zip %></p>
+<%= @shelter.zip %><br>
 
 <%= link_to 'Update Shelter', "/shelters/#{@shelter.id}/edit" %><br>
 

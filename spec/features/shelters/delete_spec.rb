@@ -9,13 +9,13 @@ require 'rails_helper'
 RSpec.describe 'As a Visitor' do
   it 'I can delete a shelter' do
     shelter = Shelter.create(name: "Rando Name", address: "5 Street st.",
-    city: "Lakewood", state: "CO", zip: 80204)
+                              city: "Lakewood", state: "CO", zip: 80204)
 
     visit "/shelters/#{shelter.id}"
 
     click_link 'Delete'
 
     expect(current_path).to eq('/shelters')
-    expect(page).to_not have_content(shelter.name)
+    expect(page).to_not have_content(shelter.attributes.values)
   end
 end

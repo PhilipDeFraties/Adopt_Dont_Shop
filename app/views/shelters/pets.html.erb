@@ -1,12 +1,12 @@
 <h1>All Pets</h1>
 
   <% @shelter.pets.each do |pet| %>
-    <h2><%= image_tag(pet.image_path, :size => "200x100")%></h2>
-    <h2><%= pet.name %></h2>
-    <h2><%= pet.approx_age %></h2>
-    <h2><%= pet.sex %></h2>
-    <h2><%= pet.shelter_id %></h2><br>
-    <h2><%= pet.description %></h2><br>
+    <%= image_tag(pet.image_path, :size => "200x100")%><br>
+    Name: <%= pet.name %><br>
+    Approximate age: <%= pet.approx_age %><br>
+    Sex: <%= pet.sex %><br>
+    Shelter ID: <%= pet.shelter_id %><br>
+    Description: <%= pet.description %><br>
   <% end %>
 
   <a href= <%= "/shelters/#{@shelter.id}/pets/new" %>>Create Pet</a>
