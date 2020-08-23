@@ -1,8 +1,8 @@
 <h1>All Pets</h1>
   <% @pets.each do |pet| %>
   <h2><%= image_tag(pet.image_path, :size => "200x100")%></h2>
-  <h2><%= pet.name %></h2>
-  <h2><%= pet.approx_age %></h2>
-  <h2><%= pet.sex %></h2>
-  <h2><%= pet.shelter_id %></h2><br>
+  <h2>Name: <%= pet.name %></h2>
+  <h2>Approximate age: <%= pet.approx_age %></h2>
+  <h2>Sex: <%= pet.sex %></h2>
+  <h2>Shelter ID: <%= pet.shelter_id %></h2><br>
   <% end %>
