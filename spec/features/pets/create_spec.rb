@@ -39,9 +39,14 @@ RSpec.describe "New pet" do
           fill_in 'Approx age', with: 2
           fill_in 'Sex', with: "Male"
           fill_in 'Description', with: "Biter"
-          click_on 'Create Pet'
 
+          click_on 'Create Pet'
           expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
+
+          expect(page).to have_xpath("//img['cat4.jpg']")
           expect(page).to have_content("Bastion")
+          expect(page).to have_content(2)
+          expect(page).to have_content("Male")
+          expect(page).to have_content("Biter")
         end
 end
