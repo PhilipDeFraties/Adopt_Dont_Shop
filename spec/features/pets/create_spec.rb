@@ -38,7 +38,7 @@ RSpec.describe "New pet" do
           fill_in 'Name', with: "Bastion"
           fill_in 'Approx age', with: 2
           fill_in 'Sex', with: "Male"
-
+          fill_in 'Description', with: "Biter"
           click_on 'Create Pet'
 
           expect(current_path).to eq("/shelters/#{shelter_1.id}/pets")
