@@ -17,11 +17,10 @@ RSpec.describe "shelter pets index page" do
       expect(page).to have_content(james.name)
       expect(page).to have_content(james.approx_age)
       expect(page).to have_content(james.sex)
-      expect(page).to have_content(james.shelter_id)
+
       expect(page).to have_xpath("//img['cat2.jpg']")
       expect(page).to have_content(nooch.name)
       expect(page).to have_content(nooch.approx_age)
       expect(page).to have_content(nooch.sex)
-      expect(page).to have_content(nooch.shelter_id)
     end
 end

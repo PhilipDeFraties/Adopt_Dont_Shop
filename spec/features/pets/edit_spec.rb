@@ -16,11 +16,11 @@ require 'rails_helper'
 # the pet's data is updated,
 # and I am redirected to the Pet Show page where I see the Pet's updated information
 RSpec.describe "Edit pet" do
-shelter_1 = Shelter.create(name: "Shelter Name 1", address: "5 Street st.",
-                           city: "Lakewood", state: "CO", zip: 80204)
-james = shelter_1.pets.create(image_path: 'cat1.jpg', name: "James",
-                              approx_age: 7, sex: "Male",
-                               description: "Snuggle bug")
+  shelter_1 = Shelter.create(name: "Shelter Name 1", address: "5 Street st.",
+                             city: "Lakewood", state: "CO", zip: 80204)
+  james = shelter_1.pets.create(image_path: 'cat1.jpg', name: "James",
+                                approx_age: 7, sex: "Male",
+                                 description: "Snuggle bug")
 
   describe "As a visitor"
     describe "When I visit a Pet Show page I see a link to Update Pet"
@@ -32,8 +32,6 @@ james = shelter_1.pets.create(image_path: 'cat1.jpg', name: "James",
 
           visit "/pets/#{james.id}"
           click_on "Update Pet"
-
-
 
           expect(current_path).to eq("/pets/#{james.id}/edit")
 
